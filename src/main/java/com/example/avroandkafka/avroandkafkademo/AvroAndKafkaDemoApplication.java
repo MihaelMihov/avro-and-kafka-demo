@@ -30,7 +30,8 @@ public class AvroAndKafkaDemoApplication {
          * and received a java object with the help of
          * greetingKafkaListenerContainerFactory.
          */
-        producer.sendOrderMessage(new Order(22, "How to be happy?", 2000));
+        producer.sendOrderMessage(new Order(22, "How to be Nice?", 2000));
+        producer.sendOrderMessage(new Order(23, "How to be Good?", 6000));
         listener.orderLatch.await(10, TimeUnit.SECONDS);
 
         context.close();
